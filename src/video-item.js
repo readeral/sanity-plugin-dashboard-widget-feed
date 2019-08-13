@@ -42,6 +42,12 @@ export default function VideoItem({title, id, imageURL, href, byline, descriptio
 VideoItem.propTypes = {
   title: PropTypes.string.isRequired,
   posterURL: PropTypes.string,
+  videoOptions: PropTypes.shape({
+    controls: PropTypes.bool,
+    pip: PropTypes.bool,
+    playing: PropTypes.bool,
+    light: PropTypes.bool
+  }),
   href: PropTypes.string.isRequired,
   category: PropTypes.string,
   byline: PropTypes.string.isRequired,
