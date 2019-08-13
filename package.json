@@ -1,7 +1,7 @@
 {
   "name": "sanity-plugin-dashboard-widget-feed",
   "version": "0.1.0",
-  "description": "A plugin for Sanity dashboard for a feed of content",
+  "description": "A plugin for Sanity dashboard to render a feed of content.",
   "main": "lib/index.js",
   "scripts": {
     "babel": "babel src -d lib --copy-files",
@@ -14,7 +14,10 @@
     "dashboard",
     "feed"
   ],
-  "author": "Alan Reader",
+  "author": "Alan Reader <alan@readeral.com>",
+  "repository": {
+    "url": "https://github.com/readeral/sanity-plugin-dashboard-widget-feed"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
