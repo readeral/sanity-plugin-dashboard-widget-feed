@@ -4,9 +4,10 @@
   "description": "A plugin for Sanity dashboard to render a feed of content.",
   "main": "lib/index.js",
   "scripts": {
-    "babel": "babel src -d lib --copy-files",
+    "build": "babel src -d lib --copy-files",
+    "prepublishOnly": "npm run build",
     "lint": "eslint ./src",
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "sanity",
@@ -14,10 +15,15 @@
     "dashboard",
     "feed"
   ],
-  "author": "Alan Reader <alan@readeral.com>",
+  "author": "Alan Reader <opensource@readeral.com>",
   "repository": {
-    "url": "https://github.com/readeral/sanity-plugin-dashboard-widget-feed"
+    "type": "git",
+    "url": "https://github.com/readeral/sanity-plugin-dashboard-widget-feed.git"
   },
+  "bugs": {
+    "url": "https://github.com/readeral/sanity-plugin-dashboard-widget-feed/issues"
+  },
+  "homepage": "https://github.com/readeral/sanity-plugin-dashboard-widget-feed",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -30,11 +36,14 @@
     "eslint-config-sanity": "^0.141.5",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.14.3",
-    "prettier": "^1.18.2",
-    "prop-types": "^15.7.2",
-    "react-hot-loader": "^4.12.10"
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6 || ^16",
+    "react": "^16.8.0"
   },
   "dependencies": {
+    "@sanity/base": "^0.141.6",
     "@sanity/client": "^0.141.6",
     "@sanity/image-url": "^0.140.12",
     "react": "^16.9.0",

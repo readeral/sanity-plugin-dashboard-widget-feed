@@ -5,9 +5,9 @@ A dashboard widget based on the [Sanity tutorials widget](https://github.com/san
 ## Install
 
 - `cd` to your Content Studio
-- Type `npm install sanity-plugin-dashboard-widget-feed`:
+- Type `sanity install sanity-plugin-dashboard-widget-feed`:
 - The widget will be installed to `./node_modules` in your Studio
-- Ensure `dashboard-widget-feed` is appended to the `plugins` array in the `sanity.json` file of your Studio
+- Ensure `dashboard-widget-feed` has been appended to the `plugins` array in the `sanity.json` file of your Studio
 
 ## How to configure the Feed Widget
 
