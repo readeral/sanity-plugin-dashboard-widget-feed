@@ -1,6 +1,6 @@
 # Feed Widget for Sanity Dashboard
 
-A dashboard widget based on the [Sanity tutorials widget](https://github.com/sanity-io/sanity/tree/next/packages/%40sanity/dashboard/src/widgets/sanityTutorials) with both React component and schemas included
+A dashboard widget based on the [Sanity tutorials widget](https://github.com/sanity-io/sanity/tree/next/packages/%40sanity/dashboard/src/widgets/sanityTutorials)
 
 ## Install
 
@@ -11,7 +11,7 @@ A dashboard widget based on the [Sanity tutorials widget](https://github.com/san
 
 ## How to configure the Feed Widget
 
-In your dashboardConfig.js file ([see here for more about dashboardConfig](https://www.sanity.io/docs/dashboard/installing-and-configuring-widgets)) add the following in the widgets array:
+In your dashboardConfig.js file ([see here for more about dashboardConfig](https://www.sanity.io/docs/content-studio/dashboard)) add the following in the widgets array:
 
 ```
     {

@@ -40,14 +40,12 @@
   },
   "peerDependencies": {
     "prop-types": "^15.6 || ^16",
-    "react": "^16.8.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@sanity/base": "^0.141.6",
     "@sanity/client": "^0.141.6",
     "@sanity/image-url": "^0.140.12",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
     "react-player": "^1.11.2"
   }

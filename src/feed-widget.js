@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FeedItem from './feed-item';
 import VideoItem from './video-item';
@@ -9,31 +9,21 @@ const {urlBuilder, getFeed} = dataAdapter;
 
 const urlRegEx = /^(?:http:\/\/)?(?:https:\/\/)?(?:www\.)?(?:youtube|facebook|dailymotion|soundcloud|vimeo|wistia|mixcloud|twitch)\.com/gi
 
-export default class FeedWidget extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      feedItems: []
-    }
-  }
-  
-  componentDidMount() {
-    getFeed(this.props.queryString, this.props.clientConfig).then(response => {
-      this.setState({
-        feedItems: response.result
-      });
-    });
-  }
+export default function FeedWidget({queryString, clientConfig, title}) {
+  const [feedItems, updateFeedItems] = useState(null);
 
-  render() {
-    const {title, clientConfig} = this.props;
-    const {feedItems} = this.state;
+  useEffect(() => {
+    getFeed(queryString, clientConfig).then(response => {
+      updateFeedItems(response.result)
+    })
+  }, [feedItems]);
 
     return (
       <div className={styles.root}>
         <header className={styles.header}>
           <h1 className={styles.title}>{title ? title : 'Media Feed'}</h1>
         </header>
+        {feedItems ?
         <ul className={styles.grid}>
           {feedItems.map(feedItem => {
             return feedItem.title ? (
@@ -70,9 +60,9 @@ export default class FeedWidget extends React.Component {
             ) : null;
           })}
         </ul>
+        : ''}
       </div>
     );
-  }
 }
 
 FeedWidget.propTypes = {

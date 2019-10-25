@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './feed-item.css';
 import ReactPlayer from 'react-player'
@@ -7,17 +7,26 @@ export default function VideoItem({title, id, imageURL, href, byline, descriptio
   
   const thumbnail = imageURL ? imageURL : true
 
+  const videoInst = useRef();
+
+  const [pipValue, togglePip] = useState(false)
+
+  function runpip() {
+    togglePip(!pipValue)
+  }
+
   return (
     <a className={styles.root}>
       <div className={styles.posterContainer}>
         <ReactPlayer
+          ref={videoInst}
           className={styles.reactPlayer}
           url={href}
           width="100%"
           height="100%"
           playsinline
           controls={videoOptions.controls}
-          pip={videoOptions.pip}
+          pip={pipValue}
           playing={videoOptions.playing}
           light={videoOptions.light ? thumbnail : ''}
           />
@@ -34,6 +43,7 @@ export default function VideoItem({title, id, imageURL, href, byline, descriptio
             ? {description}
             : ''}
         </div>
+        <button onClick={runpip}>Picture</button>
       </div>
     </a>
   );
