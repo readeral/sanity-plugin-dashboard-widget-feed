@@ -8,14 +8,6 @@
       "name": "part:@sanity/dashboard/widget/feed-widget",
       "implements": "part:@sanity/dashboard/widget",
       "path": "index.js"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "feed-widget-presenter-schema.js"
-    },
-    {
-      "implements": "part:@sanity/base/schema-type",
-      "path": "feed-widget-schema.js"
     }
   ]
 }
