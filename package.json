@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-dashboard-widget-feed",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A plugin for Sanity dashboard to render a feed of content.",
   "main": "lib/index.js",
   "scripts": {
